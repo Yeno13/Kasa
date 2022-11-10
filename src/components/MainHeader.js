@@ -9,7 +9,7 @@ const MainHeader = () => {
       <nav>
         <ul>
           <li>
-            <NavLink activeClassName={classes.active} to="/home">
+            <NavLink activeClassName={classes.active} to="/kasa">
               Accueil
             </NavLink>
           </li>
