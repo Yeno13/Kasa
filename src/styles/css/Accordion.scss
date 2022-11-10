@@ -1,0 +1,101 @@
+.accordion-list {
+  list-style: none;
+  margin: auto;
+  padding-top: 30px;
+  width: 75%;
+  overflow: hidden;
+  color: #fff;
+  font-family: "Montserrat", sans-serif;
+}
+
+li {
+  margin-bottom: 50px;
+}
+
+.accordion-list__item + .accordion-list__item {
+  border-top: 1px solid rgba(0, 0, 0, 0.2);
+}
+
+.accordion-item--opened .accordion-item__icon {
+  transform: rotate(180deg);
+}
+
+.accordion-item--opened .accordion-item__inner {
+  max-height: 100rem;
+  transition-timing-function: cubic-bezier(0.895, 0.03, 0.685, 0.22);
+  transition-duration: 0.5s;
+  transition-property: max-height;
+}
+
+.accordion-item--opened .accordion-item__content {
+  opacity: 1;
+  transform: translateY(0);
+  transition-delay: 0.2s;
+  transition-timing-function: ease-in-out;
+  transition-duration: 0.2s;
+  transition-property: opacity, transform;
+}
+
+.accordion-item__line {
+  /* display: block; */
+  height: 47px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background-color: #ff6060;
+  position: relative;
+  border-radius: 5px;
+}
+.accordion-item__line:hover {
+  cursor: pointer;
+}
+.accordion-item__title {
+  font-size: 20px;
+  padding: 15px;
+  font-style: normal;
+  color: white;
+  font-family: "Montserrat", sans-serif;
+}
+
+.accordion-item__icon {
+  color: white;
+  width: 1.2rem;
+  height: 1.2rem;
+  transition: transform 0.3s ease-in-out;
+  background-size: contain;
+  background-repeat: no-repeat;
+  margin-right: 20px;
+}
+
+.accordion-item__inner {
+  max-height: 0;
+  overflow: hidden;
+  text-transform: cubic-bezier(0.95, 0.05, 0.795, 0.035);
+  transition-duration: 0.5s;
+  transition-property: max-height;
+  z-index: 1;
+  position: relative;
+  background-color: #f7f7f7;
+  border-radius: 10px;
+}
+
+.accordion-item__content {
+  opacity: 0;
+  transform: translateY(-1rem);
+  transition-timing-function: linear, ease;
+  transition-duration: 0.1s;
+  transition: opacity, transform;
+  transition-delay: 0.5s;
+}
+
+.accordion-item__paragraph {
+  margin: 0;
+  font-size: 18px;
+  color: #ff6060;
+  font-family: "Montserrat", sans-serif;
+  text-align: left;
+  padding-left: 20px;
+  padding-top: 10px;
+  padding-bottom: 10px;
+  padding-right: 10px;
+}

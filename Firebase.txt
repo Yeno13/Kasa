@@ -1,0 +1,38 @@
+  const pictures = { url };
+  console.log(pictures);
+  const [currentIndex, setCurrentIndex] = useState;
+  const next = () => {
+    setCurrentIndex((currentIndex + 1) % pictures.length);
+  };
+  const prev = () => {
+    setCurrentIndex((currentIndex - 1 + pictures.length) % pictures.length);
+  };
+
+  return (
+    <Itemlist>
+      {/* Render the carousel */}
+      <div className="slider-container">
+        {pictures.map((photo) => (
+          <div
+            key={photo.id}
+            className={
+              pictures[currentIndex].id === photo.id ? "fade" : "slide fade"
+            }
+          >
+            <img src={photo.url} alt={photo.title} className="photo" />
+            <div className="caption">{photo.title}</div>
+          </div>
+        ))}
+
+        {/* Previous button */}
+        <button onClick={prev} className="prev">
+          &lt;
+        </button>
+
+        {/* Next button */}
+        <button onClick={next} className="next">
+          &gt;
+        </button>
+      </div>
+    </Itemlist>
+  );

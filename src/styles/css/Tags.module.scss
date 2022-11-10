@@ -1,0 +1,17 @@
+.list {
+  display: flex;
+  flex-direction: row;
+}
+.tags {
+  width: fit-content;
+  color: white;
+  border-radius: 10px;
+  height: 25px;
+  font-family: "Montserrat", sans-serif;
+  font-size: 14px;
+  padding-left: 15px;
+  padding-right: 15px;
+  background-color: #ff6060;
+  list-style: none;
+  line-height: 25px;
+}

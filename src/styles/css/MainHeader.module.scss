@@ -1,0 +1,40 @@
+.header {
+  display: flex;
+  justify-content: space-between;
+  flex-direction: row;
+  position: relative;
+  height: 68px;
+  top: 40px;
+  left: 100px;
+
+  & nav {
+    left: 75.08%;
+    margin-right: 100px;
+    top: 25%;
+    bottom: 25%;
+  }
+  & ul {
+    height: 100%;
+    list-style: none;
+    display: flex;
+  }
+  & li {
+    margin-right: 57px;
+  }
+  & a {
+    text-decoration: none;
+    color: #ff6060;
+    font-family: "Montserrat", sans-serif;
+    font-style: normal;
+    font-size: 24px;
+    line-height: 142%;
+    font-weight: 500;
+  }
+
+  & a:hover,
+  a:active,
+  a.active {
+    padding-bottom: 0.25rem;
+    border-bottom: 2px solid #ff6060;
+  }
+}

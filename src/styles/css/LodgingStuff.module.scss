@@ -1,0 +1,35 @@
+.wrapper {
+  font-family: "Montserrat", sans-serif;
+  color: #ff6060;
+  display: flex;
+  justify-content: space-around;
+}
+
+.title {
+  font-style: normal;
+  font-weight: 500;
+  font-size: 36px;
+  margin-top: 0px;
+}
+
+.location {
+  font-size: 18px;
+  display: flex;
+  align-items: flex-start;
+  margin-top: -20px;
+}
+
+.profile {
+  display: flex;
+  align-items: flex-start;
+}
+
+.picture {
+  border-radius: 100px;
+  width: 64px;
+}
+
+.hostName {
+  display: flex;
+  font-size: 18px;
+}
