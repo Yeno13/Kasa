@@ -1,15 +1,16 @@
 .header {
+  width: 90%;
   display: flex;
   justify-content: space-between;
   flex-direction: row;
   position: relative;
   height: 68px;
   top: 40px;
-  left: 100px;
+  left: 120px;
 
   & nav {
     left: 75.08%;
-    margin-right: 100px;
+    margin-right: 0px;
     top: 25%;
     bottom: 25%;
   }
