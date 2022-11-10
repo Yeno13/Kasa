@@ -7,6 +7,7 @@ import Tags from "../components/Tags";
 import StarRating from "../components/StarRating";
 import AccordionItem from "../components/AccordionItem";
 import "../styles/css/Accordion.scss";
+import "../styles/css/Lodging.scss";
 
 const Lodging = () => {
   const { itemId } = useParams();
