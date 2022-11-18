@@ -9,3 +9,10 @@
   grid-template-columns: 47% 47%;
   grid-gap: 20px 100px;
 }
+
+@media (max-width: 768px) {
+  .Accordion {
+    display: flex;
+    flex-direction: column;
+  }
+}

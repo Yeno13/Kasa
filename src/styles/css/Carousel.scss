@@ -18,28 +18,24 @@
 
 .right-arrow {
   position: absolute;
-  top: 50%;
+  top: 45%;
   right: 0%;
   font-size: 3rem;
   color: white;
   z-index: 10;
   cursor: pointer;
   user-select: none;
-  stroke: grey;
-  stroke-width: 15px;
 }
 
 .left-arrow {
   position: absolute;
-  top: 50%;
+  top: 45%;
   left: 0%;
   font-size: 3rem;
   color: white;
   z-index: 10;
   cursor: pointer;
   user-select: none;
-  stroke: grey;
-  stroke-width: 15px;
 }
 
 .slide {
@@ -72,7 +68,22 @@
 }
 
 @media (max-width: 768px) {
+  .slider {
+    margin-bottom: 20px;
+  }
   .image {
     height: 35vh;
+  }
+  .count {
+    display: none;
+  }
+  .right-arrow {
+    stroke: none;
+    top: 45%;
+  }
+
+  .left-arrow {
+    stroke: none;
+    top: 45%;
   }
 }
