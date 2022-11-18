@@ -10,7 +10,7 @@ class NotFoundPage extends React.Component {
         <p className={classes.text}>
           Oups! La page que vous demandez n'existe pas.
         </p>
-        <NavLink to="/" className={classes.link}>
+        <NavLink to="/kasa/" className={classes.link}>
           Retourner sur la page d’accueil
         </NavLink>
       </div>

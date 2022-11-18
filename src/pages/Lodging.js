@@ -7,7 +7,7 @@ import Tags from "../components/Tags";
 import StarRating from "../components/StarRating";
 import AccordionItem from "../components/AccordionItem";
 import "../styles/css/Accordion.scss";
-import "../styles/css/Lodging.scss";
+import classes from "../styles/css/Lodging.module.scss";
 
 const Lodging = () => {
   const { itemId } = useParams();
@@ -21,20 +21,24 @@ const Lodging = () => {
         hostName={item.host.name}
         picture={item.host.picture}
       />
-      <Tags tags={item.tags} />
-      <StarRating stars={item.rating} />
-      <AccordionItem
-        text={item.equipments}
-        title="Equipement"
-        index={item.id}
-        className="wrapper-inner"
-      />
-      <AccordionItem
-        text={item.description}
-        title="Description"
-        index={item.id}
-        className="wrapper-inner"
-      />
+      <div className={classes.TagsStars}>
+        <Tags tags={item.tags} />
+        <StarRating stars={item.rating} />
+      </div>
+      <div className={classes.Accordion}>
+        <AccordionItem
+          text={item.description}
+          title="Description"
+          index={item.id}
+          className="wrapper-inner"
+        />
+        <AccordionItem
+          text={item.equipments}
+          title="Equipement"
+          index={item.id}
+          className="wrapper-inner"
+        />
+      </div>
     </Fragment>
   );
 };

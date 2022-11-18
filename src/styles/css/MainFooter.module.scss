@@ -10,13 +10,29 @@
   color: white;
   font-family: "Montserrat", sans-serif;
   position: absolute;
-  top: 65%;
-  left: 39%;
+  bottom: 0;
+  width: 100%;
+  text-align: center;
   font-size: 24px;
 }
 
 .footerImg {
+  max-height: 100%;
+  max-width: 90%;
   position: absolute;
-  top: 40%;
-  left: 46%;
+  top: 0;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  margin: auto;
+}
+
+@media (max-width: 768px) {
+  .footer {
+    margin-top: 2em;
+  }
+
+  .footerTxt {
+    font-size: 15px;
+  }
 }

@@ -5,7 +5,7 @@ import LogoHeader from "../styles/images/LogoHeader.png";
 const MainHeader = () => {
   return (
     <header className={classes.header}>
-      <img src={LogoHeader} alt="Logo Kasa" />
+      <img className={classes.image} src={LogoHeader} alt="Logo Kasa" />
       <nav>
         <ul>
           <li>

@@ -1,4 +1,5 @@
-import StarIcon from "@mui/icons-material/Star";
+// import StarIcon from "@mui/icons-material/Star";
+import { FaStar } from "react-icons/fa";
 import classes from "../styles/css/StarRating.module.scss";
 
 const StarRating = ({ stars }) => {
@@ -8,9 +9,9 @@ const StarRating = ({ stars }) => {
     <div className={classes.rating}>
       {[...new Array(totalStars)].map((arr, index) => {
         return index < activeStars ? (
-          <StarIcon key={index} className={classes.icon} />
+          <FaStar key={index} className={classes.icon} />
         ) : (
-          <StarIcon key={index} className={classes.border} />
+          <FaStar key={index} className={classes.border} />
         );
       })}
     </div>

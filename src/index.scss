@@ -1,14 +1,23 @@
 @import url("https://fonts.googleapis.com/css?family=Montserrat:wght@500;700&display=swap");
 
-* {
-  box-sizing: border-box;
-}
+@media (min-width: 768px) {
+  * {
+    box-sizing: border-box;
+  }
 
-body {
-  margin: 0;
+  main {
+    margin-right: 100px;
+    margin-left: 100px;
+    margin-top: 40px;
+    margin-bottom: 0px;
+    text-align: center;
+  }
 }
 
 main {
-  margin-top: 7rem;
+  margin-right: 20px;
+  margin-left: 20px;
+  margin-top: 20px;
+  margin-bottom: 0px;
   text-align: center;
 }

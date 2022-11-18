@@ -1,0 +1,11 @@
+.TagsStars {
+  margin-top: 20px;
+  display: flex;
+  justify-content: space-between;
+}
+
+.Accordion {
+  display: grid;
+  grid-template-columns: 47% 47%;
+  grid-gap: 20px 100px;
+}

@@ -1,9 +1,16 @@
 .AboutImg {
   position: relative;
-  width: 90%;
+  width: 100%;
   border-radius: 25px;
   object-fit: cover;
   object-position: 0px 45%;
   height: 250px;
   filter: brightness(70%);
+}
+
+@media (max-width: 768px) {
+  .AboutImg {
+    height: 220px;
+    object-fit: cover;
+  }
 }

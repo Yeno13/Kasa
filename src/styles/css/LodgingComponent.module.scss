@@ -2,7 +2,7 @@
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
   display: flex;
-  justify-content: space-around;
+  justify-content: space-between;
 }
 
 .title {
@@ -31,5 +31,13 @@
 
 .hostName {
   display: flex;
+  text-align: right;
+  flex-direction: column;
   font-size: 18px;
+  margin-right: 10px;
+}
+.name {
+  margin: 5px 0 5px 0;
+  font-size: 18px;
+  font-weight: 500;
 }
