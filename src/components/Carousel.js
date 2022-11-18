@@ -19,18 +19,7 @@ const Carousel = ({ slides }) => {
     <section className="slider">
       <FaChevronLeft className="left-arrow" onClick={prevSlide} />
       <FaChevronRight className="right-arrow" onClick={nextSlide} />
-      {slides.map((slide, index) => {
-        return (
-          <div
-            className={index === current ? "slide active" : "slide"}
-            key={index}
-          >
-            {index === current && (
-              <img src={slide} alt="apt" className="image" />
-            )}
-          </div>
-        );
-      })}
+      <img src={slides[current]} alt="apt" className="image" />
       <p className="count">
         {current + 1}/{length}
       </p>

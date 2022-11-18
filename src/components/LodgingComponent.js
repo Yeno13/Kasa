@@ -1,7 +1,7 @@
-import { LogementsData } from "../components/LogementsData";
-import classes from "../styles/css/LodgingStuff.module.scss";
+import { LogementsData } from "./LogementsData";
+import classes from "../styles/css/LodgingComponent.module.scss";
 
-const LodgingStuff = ({ title, location, host, picture }) => {
+const LodgingComponent = ({ title, location, hostName, picture }) => {
   const item = LogementsData.find((item) => item.id);
   return (
     <section className={classes.wrapper}>
@@ -12,11 +12,11 @@ const LodgingStuff = ({ title, location, host, picture }) => {
         <h2 className={classes.location}>{location}</h2>
       </div>
       <div className={classes.profile}>
-        <p className={classes.hostName}>{host}</p>
+        <p className={classes.hostName}>{hostName}</p>
         <img src={picture} alt="profile pic" className={classes.picture} />
       </div>
     </section>
   );
 };
 
-export default LodgingStuff;
+export default LodgingComponent;
