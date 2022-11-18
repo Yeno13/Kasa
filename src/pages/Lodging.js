@@ -2,7 +2,7 @@ import { Fragment } from "react";
 import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import { LogementsData } from "../components/LogementsData";
-import LodgingStuff from "../components/LodgingStuff";
+import LodgingComponent from "../components/LodgingComponent";
 import Tags from "../components/Tags";
 import StarRating from "../components/StarRating";
 import AccordionItem from "../components/AccordionItem";
@@ -15,10 +15,10 @@ const Lodging = () => {
   return (
     <Fragment>
       <Carousel slides={item.pictures}></Carousel>
-      <LodgingStuff
+      <LodgingComponent
         title={item.title}
         location={item.location}
-        host={item.host.name}
+        hostName={item.host.name}
         picture={item.host.picture}
       />
       <Tags tags={item.tags} />
