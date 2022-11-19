@@ -3,8 +3,8 @@ import { useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import { LogementsData } from "../components/LogementsData";
 import LodgingComponent from "../components/LodgingComponent";
-import Tags from "../components/Tags";
-import StarRating from "../components/StarRating";
+// import Tags from "../components/Tags";
+// import StarRating from "../components/StarRating";
 import AccordionItem from "../components/AccordionItem";
 import "../styles/css/Accordion.scss";
 import classes from "../styles/css/Lodging.module.scss";
@@ -20,11 +20,13 @@ const Lodging = () => {
         location={item.location}
         hostName={item.host.name}
         picture={item.host.picture}
+        tags={item.tags}
+        stars={item.rating}
       />
-      <div className={classes.TagsStars}>
+      {/* <div className={classes.TagsStars}>
         <Tags tags={item.tags} />
         <StarRating stars={item.rating} />
-      </div>
+      </div> */}
       <div className={classes.Accordion}>
         <AccordionItem
           text={item.description}
