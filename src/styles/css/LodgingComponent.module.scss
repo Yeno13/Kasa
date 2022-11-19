@@ -84,16 +84,31 @@
 .border {
   color: #e3e3e3;
 }
-
+.hostDetail {
+  display: none;
+}
 @media (max-width: 768px) {
   .titlebox {
     display: flex;
     flex-direction: column;
   }
 
+  .TagsStars {
+    display: flex;
+    flex-direction: column;
+    margin-bottom: 20px;
+  }
+
+  .rating {
+    text-align: left;
+  }
+
   .title {
     font-size: 18px;
     order: 1;
+  }
+  .tags {
+    margin-bottom: 30px;
   }
 
   .location {
@@ -123,5 +138,22 @@
     margin: 5px 0 5px 0;
     font-size: 18px;
     font-weight: 500;
+  }
+
+  .hostDetails {
+    display: none;
+  }
+
+  .hostDetail {
+    display: flex;
+    flex-direction: row;
+    font-family: "Montserrat", sans-serif;
+    color: #ff6060;
+  }
+
+  .starProfile {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
   }
 }

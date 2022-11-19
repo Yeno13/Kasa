@@ -41,14 +41,23 @@ const LodgingComponent = ({
             );
           })}
         </ul>
-        <div className={classes.rating}>
-          {[...new Array(totalStars)].map((arr, index) => {
-            return index < activeStars ? (
-              <FaStar key={index} className={classes.icon} />
-            ) : (
-              <FaStar key={index} className={classes.border} />
-            );
-          })}
+        <div className={classes.starProfile}>
+          <div className={classes.rating}>
+            {[...new Array(totalStars)].map((arr, index) => {
+              return index < activeStars ? (
+                <FaStar key={index} className={classes.icon} />
+              ) : (
+                <FaStar key={index} className={classes.border} />
+              );
+            })}
+          </div>
+          <div className={classes.hostDetail}>
+            <div className={classes.hostName}>
+              <p className={classes.name}>{name[0]}</p>
+              <p className={classes.name}>{name[1]}</p>
+            </div>
+            <img src={picture} alt="profile pic" className={classes.picture} />
+          </div>
         </div>
       </div>
     </section>
