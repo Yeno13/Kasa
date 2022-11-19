@@ -111,6 +111,11 @@
     margin-bottom: 30px;
   }
 
+  .list {
+    flex-wrap: wrap;
+    display: flex;
+  }
+
   .location {
     font-size: 14px;
     margin-top: -10px;
