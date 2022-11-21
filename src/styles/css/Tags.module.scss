@@ -18,3 +18,9 @@
   list-style: none;
   line-height: 25px;
 }
+
+@media (max-width: 768px) {
+  .list {
+    margin: 0px 0px 20px 0px;
+  }
+}

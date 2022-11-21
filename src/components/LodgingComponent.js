@@ -1,19 +1,11 @@
 import { LogementsData } from "./LogementsData";
+import Tags from "./Tags";
+import StarRating from "./StarRating";
 import classes from "../styles/css/LodgingComponent.module.scss";
-import { FaStar } from "react-icons/fa";
 
-const LodgingComponent = ({
-  title,
-  location,
-  hostName,
-  picture,
-  tags,
-  stars,
-}) => {
+const LodgingComponent = ({ title, location, hostName, picture }) => {
   const item = LogementsData.find((item) => item.id);
   const name = hostName.split(" ");
-  const totalStars = 5;
-  const activeStars = stars;
   return (
     <section className={classes.section}>
       <div className={classes.wrapper}>
@@ -23,6 +15,9 @@ const LodgingComponent = ({
           </h1>
           <h2 className={classes.location}>{location}</h2>
         </div>
+        <Tags tags={item.tags} className={classes.tags} />
+      </div>
+      <div className={classes.hostStars}>
         <div className={classes.hostDetails}>
           <div className={classes.hostName}>
             <p className={classes.name}>{name[0]}</p>
@@ -30,35 +25,7 @@ const LodgingComponent = ({
           </div>
           <img src={picture} alt="profile pic" className={classes.picture} />
         </div>
-      </div>
-      <div className={classes.TagsStars}>
-        <ul className={classes.list}>
-          {tags.map((tags, index) => {
-            return (
-              <li className={classes.tags} key={index}>
-                {tags}
-              </li>
-            );
-          })}
-        </ul>
-        <div className={classes.starProfile}>
-          <div className={classes.rating}>
-            {[...new Array(totalStars)].map((arr, index) => {
-              return index < activeStars ? (
-                <FaStar key={index} className={classes.icon} />
-              ) : (
-                <FaStar key={index} className={classes.border} />
-              );
-            })}
-          </div>
-          <div className={classes.hostDetail}>
-            <div className={classes.hostName}>
-              <p className={classes.name}>{name[0]}</p>
-              <p className={classes.name}>{name[1]}</p>
-            </div>
-            <img src={picture} alt="profile pic" className={classes.picture} />
-          </div>
-        </div>
+        <StarRating stars={item.rating} />
       </div>
     </section>
   );

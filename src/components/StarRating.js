@@ -9,9 +9,9 @@ const StarRating = ({ stars }) => {
     <div className={classes.rating}>
       {[...new Array(totalStars)].map((arr, index) => {
         return index < activeStars ? (
-          <FaStar key={index} className={classes.icon} />
+          <FaStar key={index} className={classes.red} />
         ) : (
-          <FaStar key={index} className={classes.border} />
+          <FaStar key={index} className={classes.grey} />
         );
       })}
     </div>

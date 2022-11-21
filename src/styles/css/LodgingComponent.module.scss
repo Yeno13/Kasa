@@ -1,8 +1,13 @@
-.wrapper {
+.section {
   font-family: "Montserrat", sans-serif;
   color: #ff6060;
   display: flex;
   justify-content: space-between;
+  margin-bottom: 20px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
 }
 
 .title {
@@ -47,118 +52,24 @@
   font-weight: 500;
 }
 
-.list {
+.hostStars {
+  margin-top: 0px;
   display: flex;
-  flex-direction: row;
-  padding: 0px;
-  margin: 0px;
-}
-.tags {
-  width: fit-content;
-  color: white;
-  border-radius: 10px;
-  height: 25px;
-  font-family: "Montserrat", sans-serif;
-  font-size: 14px;
-  padding-left: 15px;
-  padding-right: 15px;
-  margin-right: 10px;
-  background-color: #ff6060;
-  list-style: none;
-  line-height: 25px;
+  flex-direction: column;
 }
 
-.TagsStars {
-  margin-top: 20px;
-  display: flex;
-  justify-content: space-between;
-}
-
-.rating {
-  font-size: 25px;
-}
-.icon {
-  color: #ff6060;
-}
-
-.border {
-  color: #e3e3e3;
-}
-.hostDetail {
-  display: none;
-}
 @media (max-width: 768px) {
-  .titlebox {
+  .section {
     display: flex;
+    justify-content: left;
+    flex-direction: column;
+  }
+  .wrapper {
     flex-direction: column;
   }
 
-  .TagsStars {
-    display: flex;
-    flex-direction: column;
-    margin-bottom: 20px;
-  }
-
-  .rating {
-    text-align: left;
-  }
-
-  .title {
-    font-size: 18px;
-    order: 1;
-  }
-  .tags {
-    margin-bottom: 30px;
-  }
-
-  .list {
-    flex-wrap: wrap;
-    display: flex;
-  }
-
-  .location {
-    font-size: 14px;
-    margin-top: -10px;
-    order: 2;
-  }
-
-  .profile {
-    display: flex;
-    align-items: flex-start;
-  }
-
-  .picture {
-    border-radius: 100px;
-    width: 64px;
-  }
-
-  .hostName {
-    display: flex;
-    text-align: right;
-    flex-direction: column;
-    font-size: 18px;
-    margin-right: 10px;
-  }
-  .name {
-    margin: 5px 0 5px 0;
-    font-size: 18px;
-    font-weight: 500;
-  }
-
-  .hostDetails {
-    display: none;
-  }
-
-  .hostDetail {
-    display: flex;
-    flex-direction: row;
-    font-family: "Montserrat", sans-serif;
-    color: #ff6060;
-  }
-
-  .starProfile {
-    display: flex;
-    flex-direction: row;
+  .hostStars {
+    flex-direction: row-reverse;
     justify-content: space-between;
   }
 }
