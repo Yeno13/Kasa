@@ -6,15 +6,21 @@ const MainHeader = () => {
   return (
     <header className={classes.header}>
       <img className={classes.image} src={LogoHeader} alt="Logo Kasa" />
-      <nav>
+      <nav className={classes.nav}>
         <ul>
           <li>
-            <NavLink activeClassName={classes.active} to="/kasa/">
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="/kasa/"
+            >
               Accueil
             </NavLink>
           </li>
           <li>
-            <NavLink activeClassName={classes.active} to="/about">
+            <NavLink
+              className={(navData) => (navData.isActive ? classes.active : "")}
+              to="/about"
+            >
               A Propos
             </NavLink>
           </li>

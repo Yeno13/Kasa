@@ -1,4 +1,3 @@
-// import StarIcon from "@mui/icons-material/Star";
 import { FaStar } from "react-icons/fa";
 import classes from "../styles/css/StarRating.module.scss";
 

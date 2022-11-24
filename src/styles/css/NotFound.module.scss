@@ -19,3 +19,15 @@
   text-decoration-line: underline;
   color: #ff6060;
 }
+
+@media (max-width: 768px) {
+  .notfound {
+    min-height: 80vh;
+  }
+  .title {
+    font-size: 96px;
+  }
+  .text {
+    font-size: 18px;
+  }
+}

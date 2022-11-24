@@ -1,5 +1,5 @@
 import { Fragment } from "react";
-import { useParams } from "react-router-dom";
+import { Navigate, useParams } from "react-router-dom";
 import Carousel from "../components/Carousel";
 import { LogementsData } from "../components/LogementsData";
 import LodgingComponent from "../components/LodgingComponent";
@@ -10,6 +10,9 @@ import classes from "../styles/css/Lodging.module.scss";
 const Lodging = () => {
   const { itemId } = useParams();
   const item = LogementsData.find((item) => item.id === itemId);
+  if (!item) {
+    return <Navigate to="/not-found" />;
+  }
   return (
     <Fragment>
       <Carousel slides={item.pictures}></Carousel>

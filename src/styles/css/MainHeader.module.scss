@@ -9,7 +9,7 @@
   position: relative;
   height: 68px;
 
-  & nav {
+  & .nav {
     left: 75.08%;
     margin-right: 0px;
     top: 25%;
@@ -73,6 +73,9 @@
     & a {
       font-size: 18px;
       line-height: 0%;
+    }
+    & .nav {
+      margin-bottom: 30px;
     }
   }
 }
