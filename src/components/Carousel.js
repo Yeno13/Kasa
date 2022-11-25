@@ -17,8 +17,13 @@ const Carousel = ({ slides }) => {
 
   return (
     <section className="slider">
-      <FaChevronLeft className="left-arrow" onClick={prevSlide} />
-      <FaChevronRight className="right-arrow" onClick={nextSlide} />
+      {length > 1 ? (
+        <div>
+          <FaChevronLeft className="left-arrow" onClick={prevSlide} />
+          <FaChevronRight className="right-arrow" onClick={nextSlide} />
+        </div>
+      ) : null}
+
       <img src={slides[current]} alt="apt" className="image" />
       <p className="count">
         {current + 1}/{length}
