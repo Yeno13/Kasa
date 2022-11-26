@@ -16,8 +16,8 @@ const App = () => {
           <Route path="/kasa/" element={<Home />} />
           <Route path="/lodging/:itemId" element={<Lodging />} />
           <Route path="/about" element={<About />} />
-          <Route path="/not-found" element={<NotFound />} />
-          <Route path="*" element={<Navigate to="/not-found" replace />} />
+          <Route path="/no-found" element={<NotFound />} />
+          <Route path="*" element={<Navigate to="/no-found" replace />} />
         </Routes>
       </main>
       <MainFooter />

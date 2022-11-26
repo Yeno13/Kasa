@@ -23,7 +23,6 @@ const Carousel = ({ slides }) => {
           <FaChevronRight className="right-arrow" onClick={nextSlide} />
         </div>
       ) : null}
-
       <img src={slides[current]} alt="apt" className="image" />
       <p className="count">
         {current + 1}/{length}

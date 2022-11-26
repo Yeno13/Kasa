@@ -11,7 +11,7 @@ const Lodging = () => {
   const { itemId } = useParams();
   const item = LogementsData.find((item) => item.id === itemId);
   if (!item) {
-    return <Navigate to="/not-found" />;
+    return <Navigate to="/no-found" />;
   }
   return (
     <Fragment>
